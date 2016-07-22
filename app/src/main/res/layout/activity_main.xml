@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fff"
+    tools:context="com.circleprogressviewdemo.admin.circleprogressview.MainActivity">
+
+    <com.circleprogressviewdemo.admin.circleprogressview.widget.CircleProgress
+        android:id="@+id/circleView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#39BDF8"
+        android:padding="5dp"
+        android:text="小球"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/circleView"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:text="刷   新"
+        android:textColor="#ff6600" />
+</RelativeLayout>
