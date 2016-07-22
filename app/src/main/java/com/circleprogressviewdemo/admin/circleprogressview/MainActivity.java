@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
+                /**
+                 * 根据之前设置位置点,对控件的位置进行赋值
+                 */
                 PointF point = (PointF) animation.getAnimatedValue();
                 tv.setX(point.x);
                 tv.setY(point.y);
@@ -94,7 +97,9 @@ public class MainActivity extends AppCompatActivity {
                 mButton.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.btn_anim));
                 if (canRepeat) {
                     valueAnimator.setEvaluator(new TypeEvaluator<PointF>() {
-
+                        /**
+                         * fraction是一个0~1的值,对每一个fraction设置控件运动轨迹中的每一个位置点
+                         */
                         @Override
                         public PointF evaluate(float fraction, PointF startValue, PointF endValue) {
                             PointF point = new PointF();
